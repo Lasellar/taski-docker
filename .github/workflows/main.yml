@@ -16,6 +16,9 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
+          cd backend
+          cat requirements.txt
+          pip install -r requirements.txt
           pip install flake8==6.0.0 flake8-isort==6.0.0
       - name: Test with flake8
         run: |
